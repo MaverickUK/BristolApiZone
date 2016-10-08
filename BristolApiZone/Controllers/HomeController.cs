@@ -10,10 +10,6 @@ namespace BristolApiZone.Web.Controllers
     {
         public ActionResult Index()
         {
-            
-
-            
-
             return View();
         }
 

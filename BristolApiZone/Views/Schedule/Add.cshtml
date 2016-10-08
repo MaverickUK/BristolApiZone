@@ -1,0 +1,62 @@
+﻿@model BristolApiZone.Domain.Models.ScheduleItem
+@{
+    ViewBag.Title = "Create new schedule";
+}
+
+<div class="journeys__panel">
+    <span class="journeys__title">New Journey</span>
+
+    @using (Html.BeginForm("Add", "Schedule", FormMethod.Post, new { @class = "journeys__form" }))
+    {
+        <input type="text" name="name" placeholder="Journeys Name">
+        <input type="time" name="time">
+
+        <div class="can-toggle">
+            <input id="a" name="timeType" type="checkbox" value="cbox1">
+            <label for="a">
+                <div class="can-toggle__switch" data-checked="Arrival" data-unchecked="Departure"></div>
+                <!--<div class="can-toggle__label-text">Time type</div>-->
+            </label>
+        </div>
+
+        <ul class="journeys__day-list">
+            <li class="journeys__day-list-item">
+                <label><input type="checkbox" id="cbox2" name="monday" value="monday"> Monday</label>
+            </li>
+            <li class="journeys__day-list-item">
+                <label><input type="checkbox" id="cbox3" name="tuesday" value="tuesday"> Tuesday</label>
+            </li>
+            <li class="journeys__day-list-item">
+                <label><input type="checkbox" id="cbox4" name="wednesday" value="wednesday"> Wednesday</label>
+            </li>
+            <li class="journeys__day-list-item">
+                <label><input type="checkbox" id="cbox5" name="thursday" value="thursday"> Thursday</label>
+            </li>
+            <li class="journeys__day-list-item">
+                <label><input type="checkbox" id="cbox6" name="friday" value="friday"> Friday</label>
+            </li>
+            <li class="journeys__day-list-item">
+                <label><input type="checkbox" id="cbox7" name="saturday" value="saturday"> Saturday</label>
+            </li>
+            <li class="journeys__day-list-item">
+                <label><input type="checkbox" id="cbox8" name="sunday" value="sunday"> Sunday</label>
+            </li>
+        </ul>
+
+        <div data-behavior="autocomplete">
+            <input id="origin-input" name="origin-input" class="controls" type="text" placeholder="Origin" data-binding="field" data-type="origin">
+            <input id="destination-input" name="destination-input" class="controls" type="text" placeholder="Destination" data-binding="field" data-type="destination">
+
+            <!-- Hidden -->
+            <input id="origin-input-lat" name="origin-input-lat">
+            <input id="origin-input-lng" name="origin-input-lng">
+            <input id="destination-input-lat" name="destination-input-lat">
+            <input id="destination-input-lng" name="destination-input-lng">
+        </div>
+
+        <button id="submit" type="submit">Add journey</button>
+    }
+    @*<form id="form" method="post" action="/schedule/add" class="journeys__form">
+      
+    </form>*@
+</div>

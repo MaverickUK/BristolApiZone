@@ -1,0 +1,27 @@
+﻿@model List<BristolApiZone.Domain.Models.ScheduleItem>
+@{
+    ViewBag.Title = "Manage schedules";
+}
+
+<section class="journeys">
+    <div class="journeys__panel">
+        <span class="journeys__title">Your Journeys</span>
+        <ul class="journeys__list">
+            @if (Model != null)
+            {
+                foreach (var item in Model)
+                {
+                    <li class="journeys__list-item">
+                        <span class="journeys__list-item-title">
+                            @item.Name
+                        </span>
+                        <a href="#">Edit</a> | <a href="#">Delete</a>
+                    </li>
+                }
+
+            }            
+        </ul>
+
+        <button class="journeys__btn-add" href="@Url.Action("Add", "Schedule")">+</button>
+    </div>
+</section>

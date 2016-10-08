@@ -4,6 +4,9 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>@ViewBag.Title</title>
+    
+    @Styles.Render("~/bundles/global.css")
+    @*<link rel="stylesheet" href="dist/styles/global.css" media="screen" />*@
     @Styles.Render("~/Content/css")
     @Scripts.Render("~/bundles/modernizr")
 </head>
@@ -16,12 +19,14 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                @Html.ActionLink("Application name", "Index", "Home", new { area = "" }, new { @class = "navbar-brand" })
+                @Html.ActionLink("Hackathon: Team Zone", "Index", "Schedule", new { area = "" }, new { @class = "navbar-brand" })
             </div>
             <div class="navbar-collapse collapse">
-                <ul class="nav navbar-nav">
-                    <li>@Html.ActionLink("Home", "Index", "Home")</li>
-                </ul>
+            <!--
+            <ul class="nav navbar-nav">
+                <li>@Html.ActionLink("Home", "Index", "Home")</li>
+            </ul>
+                -->
             </div>
         </div>
     </div>
@@ -29,12 +34,22 @@
         @RenderBody()
         <hr />
         <footer>
-            <p>&copy; @DateTime.Now.Year - My ASP.NET Application</p>
+            <p>&copy; @DateTime.Now.Year Team Zone!</p>
         </footer>
     </div>
 
     @Scripts.Render("~/bundles/jquery")
     @Scripts.Render("~/bundles/bootstrap")
     @RenderSection("scripts", required: false)
+
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyC_HgL63IZJaWoJ3_0O-RKXombpsBtY974&amp;libraries=places"></script>
+    
+    @Scripts.Render("~/bundles/app")
+
+    @*<script src="static/dist/scripts/app.js?v=1.0.0.0"></script>*@
+    <script id="__bs_script__">
+//<![CDATA[
+    document.write("<script async src='http://HOST:3000/browser-sync/browser-sync-client.js?v=2.17.1'><\/script>".replace("HOST", location.hostname));
+    //]]></script>
 </body>
 </html>
