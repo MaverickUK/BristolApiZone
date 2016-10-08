@@ -1,4 +1,7 @@
 ﻿@model List<BristolApiZone.Domain.Models.ScheduleItem>
+@{
+    ViewBag.Title = "Manage schedules";
+}
 
 <section class="journeys">
     <div class="journeys__panel">
@@ -11,11 +14,11 @@
                     <span class="journeys__list-item-title">
                         @item.Name
                     </span>
-                    <a href="#">Edit</a> | <a href="#">Delete</a>  
+                    <a href="#">Edit</a> | <a href="#">Delete</a>
                 </li>
             }
 
-            <button class="journeys__btn-add">+</button>
         </ul>
+        <button class="journeys__btn-add">+</button>
     </div>
 </section>
