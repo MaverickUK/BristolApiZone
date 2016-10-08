@@ -9,7 +9,7 @@ namespace BristolApiZone.Domain.Models
         public int Id { get; set; }
 
         public virtual Schedule Schedule { get; set; }
-
+        
         public string Name { get; set; }
 
         public TimeSpan Time { get; set; }
