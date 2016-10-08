@@ -36,6 +36,10 @@
     <StartupObject />
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="Humanizer, Version=2.1.0.0, Culture=neutral, PublicKeyToken=979442b78dfc278e, processorArchitecture=MSIL">
+      <HintPath>..\packages\Humanizer.Core.2.1.0\lib\netstandard1.0\Humanizer.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
@@ -46,7 +50,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Directions.cs" />
+    <Compile Include="Models\DirectionResult.cs" />
+    <Compile Include="Models\Journey.cs" />
+    <Compile Include="Models\Leg.cs" />
     <Compile Include="Models\Location.cs" />
+    <Compile Include="Models\PlacePoint.cs" />
     <Compile Include="Models\Schedule.cs" />
     <Compile Include="Models\ScheduleItem.cs" />
     <Compile Include="Models\TimeType.cs" />
@@ -54,6 +63,13 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\BristolApiZone.Api\BristolApiZone.Api.csproj">
+      <Project>{07a51603-8284-4303-8ae8-eb57ef57d89b}</Project>
+      <Name>BristolApiZone.Api</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

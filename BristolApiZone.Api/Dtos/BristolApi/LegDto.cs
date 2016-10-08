@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 
 namespace BristolApiZone.Api.Dtos.BristolApi
 {
@@ -12,9 +13,9 @@ namespace BristolApiZone.Api.Dtos.BristolApi
         public string SummaryHtml { get; set; }
         public string OriginPlacePointId { get; set; }
         public string DestinationPlacePointId { get; set; }
-        public string ArrivalTime { get; set; }
-        public string DepartureTime { get; set; }
-        public int VehicleType { get; set; }
+        public DateTime ArrivalTime { get; set; }
+        public DateTime DepartureTime { get; set; }
+        public VehicleTypeEnum VehicleType { get; set; }
         public int Duration { get; set; }
         public int Distance { get; set; }
         public string Polyline { get; set; }
