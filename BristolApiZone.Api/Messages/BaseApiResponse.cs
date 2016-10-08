@@ -1,9 +1,9 @@
 ﻿using System.Net;
 using Newtonsoft.Json;
 
-namespace ApiWrapper.Messages
+namespace BristolApiZone.Api.Messages
 {
-    public abstract class BaseApiResponse
+    public class BaseApiResponse
     {
         public HttpStatusCode StatusCode { get; set; }
 

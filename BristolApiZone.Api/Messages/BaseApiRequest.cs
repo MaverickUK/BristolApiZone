@@ -1,9 +1,13 @@
-﻿namespace ApiWrapper.Messages
+﻿using Newtonsoft.Json;
+
+namespace BristolApiZone.Api.Messages
 {
     public abstract class BaseApiRequest
     {
-        public string ApiKey { get; set; }
+        [JsonIgnore]
+        public virtual string ApiKey { get; set; }
 
-        public string BaseUrl { get; set; }
+        [JsonIgnore]
+        public virtual string BaseUrl { get; set; }
     }
 }

@@ -1,8 +1,9 @@
 ﻿using System.Net.Http;
+using System.Text;
 using System.Threading.Tasks;
-using ApiWrapper.Messages;
+using BristolApiZone.Api.Messages;
 
-namespace ApiWrapper
+namespace BristolApiZone.Api
 {
     public static class Api
     {
@@ -50,7 +51,7 @@ namespace ApiWrapper
         {
             using (var client = Http.GetClient(request))
             {
-                return await client.PostAsync(endpoint, new StringContent(content));
+                return await client.PostAsync(endpoint, new StringContent(content, Encoding.UTF8, "application/json"));
             }
         }
 
@@ -70,7 +71,7 @@ namespace ApiWrapper
         {
             using (var client = Http.GetClient(request))
             {
-                return await client.PutAsync(endpoint, new StringContent(content));
+                return await client.PutAsync(endpoint, new StringContent(content, Encoding.UTF8, "application/json"));
             }
         }
 

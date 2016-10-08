@@ -46,18 +46,29 @@
   <ItemGroup>
     <Compile Include="Api.cs" />
     <Compile Include="ApiException.cs" />
+    <Compile Include="BristolApi.cs" />
     <Compile Include="Convert.cs" />
+    <Compile Include="Dtos\BristolApi\DirectionsResultsDto.cs" />
+    <Compile Include="Dtos\BristolApi\JourneyDto.cs" />
+    <Compile Include="Dtos\BristolApi\LegDto.cs" />
+    <Compile Include="Dtos\BristolApi\LinkedTransitRouteInfoDto.cs" />
+    <Compile Include="Dtos\BristolApi\LinkedTransitTripInfoDto.cs" />
+    <Compile Include="Dtos\BristolApi\PlacePointDto.cs" />
+    <Compile Include="Dtos\BristolApi\ScheduledCallDto.cs" />
+    <Compile Include="Dtos\BristolApi\ScheduledStopCallDto.cs" />
+    <Compile Include="Dtos\BristolApi\StopDto.cs" />
     <Compile Include="Http.cs" />
     <Compile Include="Messages\BaseApiRequest.cs" />
     <Compile Include="Messages\BaseApiResponse.cs" />
+    <Compile Include="Messages\BristolApi\BristolApiRequest.cs" />
+    <Compile Include="Messages\BristolApi\GetDirectionResponse.cs" />
+    <Compile Include="Messages\BristolApi\GetDirectionsRequest.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Dtos\" />
-  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
