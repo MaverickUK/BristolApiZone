@@ -30,7 +30,7 @@ namespace BristolApiZone.Api
 
             var baseResponse = JsonConvert.DeserializeObject<BaseApiResponse>(content);
 
-            if (!baseResponse.Status || message.StatusCode == HttpStatusCode.InternalServerError)
+            if (message.StatusCode != HttpStatusCode.OK)
             {
                 throw new ApiException(message);
             }

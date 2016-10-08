@@ -3,7 +3,7 @@ using Newtonsoft.Json;
 
 namespace BristolApiZone.Api.Messages
 {
-    public abstract class BaseApiResponse
+    public class BaseApiResponse
     {
         public HttpStatusCode StatusCode { get; set; }
 

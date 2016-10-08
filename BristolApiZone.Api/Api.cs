@@ -1,4 +1,5 @@
 ﻿using System.Net.Http;
+using System.Text;
 using System.Threading.Tasks;
 using BristolApiZone.Api.Messages;
 
@@ -50,7 +51,7 @@ namespace BristolApiZone.Api
         {
             using (var client = Http.GetClient(request))
             {
-                return await client.PostAsync(endpoint, new StringContent(content));
+                return await client.PostAsync(endpoint, new StringContent(content, Encoding.UTF8, "application/json"));
             }
         }
 
@@ -70,7 +71,7 @@ namespace BristolApiZone.Api
         {
             using (var client = Http.GetClient(request))
             {
-                return await client.PutAsync(endpoint, new StringContent(content));
+                return await client.PutAsync(endpoint, new StringContent(content, Encoding.UTF8, "application/json"));
             }
         }
 
