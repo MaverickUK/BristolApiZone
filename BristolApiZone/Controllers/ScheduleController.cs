@@ -6,6 +6,8 @@ using System.Web.Mvc;
 
 namespace BristolApiZone.Web.Controllers
 {
+    using Domain;
+    using System.Data.Entity;
     using System.Linq;
 
     public class ScheduleController : Controller
@@ -30,7 +32,21 @@ namespace BristolApiZone.Web.Controllers
         {
             using (var context = new DatabaseContext())
             {
-                var schedule = context.ScheduleItems.FirstOrDefault();
+                var schedule = context.ScheduleItems.Include(x => x.Destination).Include(x => x.Origin).FirstOrDefault();
+
+                var origin = new PlacePoint
+                {
+                    Lat = schedule.Origin.Latitude,
+                    Lng = schedule.Origin.Longitude
+                };
+
+                var destination = new PlacePoint
+                {
+                    Lat = schedule.Destination.Latitude,
+                    Lng = schedule.Destination.Longitude
+                };
+
+                var resposne = Directions.GetDepartureDirections(origin, destination, DateTime.Now);
             }
 
             return View();
