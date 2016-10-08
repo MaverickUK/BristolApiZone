@@ -27,7 +27,7 @@
     "no-unused-vars": 2,
     "no-empty": 2,
     "comma-dangle": [2, "never"],
-    "max-len": [2, 220],
+    "max-len": [2, 999],
     "comma-style": [2, "last"],
     "dot-notation": 2,
     "brace-style": [2, "1tbs", { "allowSingleLine": false }],
