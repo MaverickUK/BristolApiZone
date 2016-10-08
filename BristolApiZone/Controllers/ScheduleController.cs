@@ -26,6 +26,16 @@ namespace BristolApiZone.Web.Controllers
             return View();
         }
 
+        public ActionResult NextJourney()
+        {
+            using (var context = new DatabaseContext())
+            {
+                var schedule = context.ScheduleItems.FirstOrDefault();
+            }
+
+            return View();
+        }
+
         [HttpPost]
         public ActionResult Add(ScheduleItem scheduleItem)
         {
