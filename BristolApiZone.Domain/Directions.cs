@@ -19,7 +19,7 @@ namespace BristolApiZone.Domain
                 ArrivalTime = arrivalTime
             };
 
-            var response = bristolApi.GetDirectionsAsync(request).Result;
+            var response = bristolApi.GetDirectionsAsync(request);
 
             return new DirectionResults(response.Data);
         }
@@ -35,7 +35,7 @@ namespace BristolApiZone.Domain
                 DepartureTime = departureTime
             };
 
-            var response = bristolApi.GetDirectionsAsync(request).Result;
+            var response = bristolApi.GetDirectionsAsync(request);
 
             return new DirectionResults(response.Data);
         }
