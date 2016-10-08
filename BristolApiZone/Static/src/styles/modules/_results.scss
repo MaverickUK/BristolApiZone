@@ -1,0 +1,31 @@
+.results {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    width: 320px;
+    padding: 20px;
+    background: #ffffff;
+    border: 1px solid #999999;
+}
+
+.results__title {
+    display: block;
+    font-size: 20px;
+    margin: 0 0 25px 0;
+}
+
+.results__list-item {
+    padding: 10px 0 5px 0;
+    border-bottom: 1px solid #f2f2f2;
+}
+
+.results__list-item-button {
+    display: block;
+    width: 100%;
+    font-size: 16px;
+    background: none;
+    border: none;
+    text-align: left;
+    color: #333333;
+    cursor: pointer;
+}

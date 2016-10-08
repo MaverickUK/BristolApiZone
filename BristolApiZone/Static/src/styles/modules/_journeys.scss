@@ -1,0 +1,90 @@
+.journeys {
+    margin: 40px auto;
+    width: 320px;
+    padding: 20px;
+    background: #ffffff;
+    border: 1px solid #999999;
+}
+
+.journeys__title {
+    display: block;
+    font-size: 20px;
+    margin: 0 0 25px 0;
+}
+
+.journeys__list-item {
+    padding: 10px 0 5px 0;
+    border-bottom: 1px solid #f2f2f2;
+}
+
+.journeys__list-item-title {
+    display: block;
+    width: 100%;
+    font-size: 16px;
+    background: none;
+    border: none;
+    text-align: left;
+    color: #333333;
+}
+
+.journeys__btn-add {
+    display: block;
+    padding: 10px;
+    margin: 20px 0;
+    width: 42px;
+    font-size: 22px;
+    background: #228B22;
+    border: none;
+    text-align: left;
+    color: #ffffff;
+    line-height: 1;
+    cursor: pointer;
+    text-align: center;
+    border-radius: 50%;
+    box-shadow: 0 2px 0 darken(#228B22, 10%);
+}
+
+.journeys__day-list-item {
+    font-size: 16px;
+    text-align: left;
+    color: #333333;
+}
+
+.journeys__form input[type="text"],
+.journeys__form input[type="time"] {
+    border: 1px solid #999999;
+    width: 100%;
+    margin: 0 0 20px 0;
+    padding: 20px;
+    box-sizing: border-box;
+    font-size: 16px;
+}
+
+.journeys__form input[type="time"] {
+    margin: 0;
+}
+
+
+.journeys__form .can-toggle {
+    margin: 20px 0 20px 0;
+}
+
+.journeys__day-list {
+    margin: 0 0 20px 0;
+}
+
+.journeys__form button[type="submit"] {
+    display: block;
+    padding: 10px 20px;
+    margin: 20px 0;
+    font-size: 16px;
+    background: #228B22;
+    border: none;
+    text-align: left;
+    color: #ffffff;
+    line-height: 1;
+    cursor: pointer;
+    text-align: center;
+    border-radius: 3px;
+    box-shadow: 0 2px 0 darken(#228B22, 10%);
+}
