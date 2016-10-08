@@ -1,9 +1,9 @@
-﻿namespace ApiWrapper.Messages
+﻿namespace BristolApiZone.Api.Messages
 {
     public abstract class BaseApiRequest
     {
-        public string ApiKey { get; set; }
+        public virtual string ApiKey { get; set; }
 
-        public string BaseUrl { get; set; }
+        public virtual string BaseUrl { get; set; }
     }
 }
