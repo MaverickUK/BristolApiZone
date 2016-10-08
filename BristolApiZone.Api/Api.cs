@@ -47,6 +47,26 @@ namespace BristolApiZone.Api
             throw new ApiException(message);
         }
 
+        private static HttpResponseMessage Post(string endpoint, BaseApiRequest request, string content)
+        {
+            using (var client = Http.GetClient(request))
+            {
+                return client.PostAsync(endpoint, new StringContent(content, Encoding.UTF8, "application/json")).Result;
+            }
+        }
+
+        public static T Post<T>(string endpoint, BaseApiRequest request, object content) where T : BaseApiResponse, new()
+        {
+            var message = Post(endpoint, request, Convert.SerializeObject(content));
+
+            if (Http.IsValidStatusCode(message.StatusCode))
+            {
+                return Convert.DeserializeMessageAsync<T>(message).Result;
+            }
+
+            throw new ApiException(message);
+        }
+
         private static async Task<HttpResponseMessage> PostAsync(string endpoint, BaseApiRequest request, string content)
         {
             using (var client = Http.GetClient(request))
