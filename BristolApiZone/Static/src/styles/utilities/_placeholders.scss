@@ -1,0 +1,94 @@
+// --------------------------------------------------------------------------
+// Placeholders
+// --------------------------------------------------------------------------
+
+// Polyfills
+// --------------------------------------------------------------------------
+
+%clearfix {
+    *zoom: 1;
+
+    &:before,
+    &:after {
+        content: "";
+        display: table;
+
+        line-height: 0;
+    }
+
+    &:after {
+        clear: both;
+    }
+}
+
+%inline-block {
+    display: -moz-inline-stack;
+    display: inline-block;
+    vertical-align: top;
+    zoom: 1;
+    *display: inline;
+}
+
+%absolutecenterd {
+    position: absolute;
+    transform: translateX(-50%) translateY(-50%);
+    top: 50%;
+    left: 50%;
+ }
+
+
+// Visibilty
+// --------------------------------------------------------------------------
+
+%hidden {
+    position: absolute;
+    left: -999em;
+}
+
+%visible {
+    position: static;
+    left: 0;
+}
+
+%hide-text {
+    background-color: transparent;
+    background-repeat: no-repeat;
+    background-position: 0 0;
+    border: 0;
+    color: transparent;
+    display: block;
+    font: 0/0 a;
+    text-shadow: none;
+}
+
+
+// Styles
+// --------------------------------------------------------------------------
+
+%basic-box {
+    padding: 12px 0;
+}
+
+%before-after-base {
+    content: '';
+    position: absolute;
+}
+
+// Display shortcuts
+// --------------------------------------------------------------------------
+
+%hide-if-screen-md-min {
+    display: none;
+
+    @include bp($screen-md) {
+        display: block;
+    }
+}
+
+%show-if-screen-md-min {
+    display: block;
+
+    @include bp($screen-md) {
+        display: none;
+    }
+}
