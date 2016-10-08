@@ -1,0 +1,23 @@
+// --------------------------------------------------------------------------
+// Typography
+// --------------------------------------------------------------------------
+
+@import 'https://fonts.googleapis.com/css?family=Fira+Sans';
+
+html {
+    /* Using rems set root size within html */
+    /* use optionally to scale */
+    /* set to ten for 10:1 ratio */
+    font-size: 16px;
+}
+
+body {
+    font-family: $font-body;
+    /* For a successful cascade */
+    /* set a unitless line height within body */
+    line-height: 1.5;
+}
+
+p + p {
+    margin-top: 12px;
+}
