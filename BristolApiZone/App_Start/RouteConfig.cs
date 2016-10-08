@@ -5,7 +5,7 @@ using System.Web;
 using System.Web.Mvc;
 using System.Web.Routing;
 
-namespace BristolApiZone
+namespace BristolApiZone.Web
 {
     public class RouteConfig
     {

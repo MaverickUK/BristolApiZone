@@ -1,7 +1,7 @@
 ﻿using System.Web;
 using System.Web.Mvc;
 
-namespace BristolApiZone
+namespace BristolApiZone.Web
 {
     public class FilterConfig
     {
