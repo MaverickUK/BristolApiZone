@@ -2,9 +2,9 @@
 using System.Net;
 using System.Net.Http;
 using System.Net.Http.Headers;
-using ApiWrapper.Messages;
+using BristolApiZone.Api.Messages;
 
-namespace ApiWrapper
+namespace BristolApiZone.Api
 {
     internal class Http
     {

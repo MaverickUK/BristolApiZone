@@ -1,8 +1,8 @@
 ﻿using System.Net.Http;
 using System.Threading.Tasks;
-using ApiWrapper.Messages;
+using BristolApiZone.Api.Messages;
 
-namespace ApiWrapper
+namespace BristolApiZone.Api
 {
     public static class Api
     {

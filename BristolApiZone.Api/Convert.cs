@@ -2,12 +2,12 @@
 using System.Net;
 using System.Net.Http;
 using System.Threading.Tasks;
-using ApiWrapper.Messages;
+using BristolApiZone.Api.Messages;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Converters;
 using Newtonsoft.Json.Serialization;
 
-namespace ApiWrapper
+namespace BristolApiZone.Api
 {
     public class Convert
     {

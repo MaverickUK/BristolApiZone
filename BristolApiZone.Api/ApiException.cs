@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Net.Http;
 
-namespace ApiWrapper
+namespace BristolApiZone.Api
 {
     public sealed class ApiException : Exception
     {
