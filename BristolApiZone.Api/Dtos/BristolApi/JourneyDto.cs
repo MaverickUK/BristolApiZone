@@ -1,11 +1,12 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 
 namespace BristolApiZone.Api.Dtos.BristolApi
 {
     public class JourneyDto
     {
-        public string ArrivalTime { get; set; }
-        public string DepartureTime { get; set; }
+        public DateTime ArrivalTime { get; set; }
+        public DateTime DepartureTime { get; set; }
         public string SummaryHtml { get; set; }
         public int Duration { get; set; }
         public List<LegDto> Legs { get; set; }
