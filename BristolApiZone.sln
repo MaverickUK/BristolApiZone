@@ -5,6 +5,8 @@ VisualStudioVersion = 14.0.25420.1
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BristolApiZone", "BristolApiZone\BristolApiZone.csproj", "{01C1456A-1237-4D6A-AE58-5DC124D8F076}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BristolApiZone.Api", "BristolApiZone.Api\BristolApiZone.Api.csproj", "{07A51603-8284-4303-8AE8-EB57EF57D89B}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +17,10 @@ Global
 		{01C1456A-1237-4D6A-AE58-5DC124D8F076}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{01C1456A-1237-4D6A-AE58-5DC124D8F076}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{01C1456A-1237-4D6A-AE58-5DC124D8F076}.Release|Any CPU.Build.0 = Release|Any CPU
+		{07A51603-8284-4303-8AE8-EB57EF57D89B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{07A51603-8284-4303-8AE8-EB57EF57D89B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{07A51603-8284-4303-8AE8-EB57EF57D89B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{07A51603-8284-4303-8AE8-EB57EF57D89B}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
